@@ -1,9 +1,5 @@
 import { useState } from 'react';
-import {
-	Outlet,
-	ReactLocation,
-	Router,
-} from '@tanstack/react-location';
+import { Outlet, ReactLocation, Router } from '@tanstack/react-location';
 import Home from './pages/home';
 import Signin from './pages/auth/signin';
 import Signup from './pages/auth/signup';
@@ -20,8 +16,8 @@ function App() {
 			routes={[
 				{ path: '/', element: <Home /> },
 				{ path: '/signin', element: <Signin /> },
-        { path: '/signup', element: <Signup /> },
-        {path:"*", element: <NotFound />}
+				{ path: '/signup', element: <Signup /> },
+				{ path: '*', element: <NotFound /> },
 			]}>
 			<Outlet />
 		</Router>
