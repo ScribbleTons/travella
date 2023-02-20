@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
 	background-color: rgba(245, 245, 245, 1);
 	font-family: 'Lato', sans-serif;
 }
+
+/* input[type='date'] {
+	display: flex;
+	display: -webkit-flex;
+	flex: 1 0 0;
+	-webkit-flex: 1 0 0;
+} */
+
 @layer base {
 	.highlighted {
 		@apply text-primary-600;

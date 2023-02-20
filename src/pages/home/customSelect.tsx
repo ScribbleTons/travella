@@ -40,7 +40,7 @@ export const CustomDatePicker: FC<Pick<Props, 'onChange' | 'title'>> = ({
 	title,
 }) => {
 	const dateRef = useRef<HTMLInputElement>(null);
-	const [date, setDate] = useState(new Date());
+	const [ date, setDate ] = useState(new Date());
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		setDate(new Date(e.target.value));
@@ -50,15 +50,17 @@ export const CustomDatePicker: FC<Pick<Props, 'onChange' | 'title'>> = ({
 		<div className='rounded-xl bg-white border border-gray-400 p-4 min-w-[180px] scale-75 md:scale-100 transition-all duration-75 ease-in-out'>
 			<p className='text-brand-text-200'>{title}</p>
 			<span
-				onClick={() => dateRef.current?.showPicker()}
+				onClick={() => {
+					dateRef.current?.click()
+					dateRef.current?.showPicker();
+				}}
 				className='flex w-fill justify-between pl-0 items-center text-secondary-600 
                 font-semibold focus:ring-transparent
                 focus:outline-none border-none'>
 				<input
-					ref={dateRef}
-					onChange={handleChange}
-					value={date.toString()}
-					className='absolute invisible'
+					ref={ dateRef }
+					onChange={ handleChange }
+					className='absolute opacity-0 z-30 w-full h-full  appearance-none'
 					type='date'
 				/>
 				{format(date, 'do MMM yyyy')}

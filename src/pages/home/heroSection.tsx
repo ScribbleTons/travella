@@ -4,7 +4,7 @@ export default function HeroSection() {
 	return (
 		<section
 			className='relative pt-20 pb-10 px-4 md:px-6 lg:px-10 flex flex-col 
-			items-center justify-center mb-64 md:mb-20'
+			items-center justify-center mb-64 md:mb-20 bg-black'
 			style={{
 				backgroundImage: `url(${hero})`,
 				backgroundRepeat: 'no-repeat',
