@@ -9,7 +9,7 @@ export default function HeroSection() {
 				backgroundImage: `url(${hero})`,
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'cover',
-				backgroundColor:"black",
+				backgroundColor:"#202020",
 				minHeight: 600,
 			}}>
 			<div>
