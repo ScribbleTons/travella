@@ -99,7 +99,7 @@ export default function Destinations() {
 					</ButtonBack>
 					<Slider className='h-fit'>
 						{destinations.map((des, i) => (
-							<Slide index={i} key={i} className='max-w-[320px] md:h-[300px] mx-8'>
+							<Slide index={i} key={i} className='max-w-[320px] md:h-[300px] mx-8 lg:mx-12'>
 								<div className='md:w-[280px] rounded-2xl overflow-hidden shadow-md'>
 									<p className='text-brand-text-600 bg-white p-6 text-center'>
 										{des.name}
